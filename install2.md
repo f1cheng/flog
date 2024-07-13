@@ -22,7 +22,7 @@ http://121.43.133.208:8080
 src/main.js
 axios.defaults.baseURL = 'http://121.43.133.208:9000/'
 
-pip install Django
+pip3 install Django
 pip3 install django-cors-headers
 pip3 install djangorestframework
 
@@ -44,6 +44,43 @@ python manage.py runserver 0.0.0.0:9000
   505  2022-02-08 14:54:56 git push origin main
 
 
+
+
+```
+
+```
+
+[root@VM-16-14-centos frontend]# uname -r
+5.14.0-474.el9.x86_64
+[root@VM-16-14-centos frontend]#
+
+
+vi src/main.js
+//axios.defaults.baseURL = 'http://121.43.133.208:9000/'
+axios.defaults.baseURL = 'http://118.25.176.102:9000/'
+
+[root@VM-16-14-centos frontend]# pip --version
+pip 21.3.1 from /usr/lib/python3.9/site-packages/pip (python 3.9)
+[root@VM-16-14-centos frontend]# pip3 --version
+pip 21.3.1 from /usr/lib/python3.9/site-packages/pip (python 3.9)
+[root@VM-16-14-centos frontend]#
+
+
+pip install Django
+pip install django-cors-headers
+pip install djangorestframework
+
+python manage.py migrate
+python manage.py runserver 0.0.0.0:9000
+
+//ok
+curl -s http://127.0.0.1:9000/decoration/cart/
+
+//need to set public ip's firewall rule:
+//via https://console.cloud.tencent.com/lighthouse/instance/detail?rid=4&id=lhins-qvxla03w&tab=firewall
+//then both below access ok.
+curl -s http://118.25.176.102:9000/decoration/cart/
+http://118.25.176.102:9000/decoration/cart/
 
 
 ```

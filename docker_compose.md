@@ -11,6 +11,7 @@ cd /myhome/project/flog/
 blog  docker-compose.yml  fe  install2.md  install.md  README.md  run_py_server.sh  run_vue.sh
 
 docker compose up -d
+then in web: http://118.25.176.102:8080/
 //////////////////////////////////////////
 [root@VM-16-14-centos flog]# docker compose up -d
 [+] Building 21.4s (24/24) FINISHED                                                                                                                                                                                           docker:default

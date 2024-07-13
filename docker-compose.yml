@@ -1,0 +1,13 @@
+services:
+  server:
+    build: blog/
+    ports:
+    - 9000:9000
+
+  web:
+    build: fe/frontend/
+    ports:
+    - 8080:8080
+    depends_on:
+      - server
+
